@@ -107,3 +107,6 @@ module.exports = {
 ## 相关知识
 
 模板引擎：[art-template](https://aui.github.io/art-template/zh-cn/docs/syntax.html)
+
+## 最后
+欢迎 **issue** 和** star **
