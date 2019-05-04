@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   #include("./layout/meta.html")
+   <title>产品介绍</title>
+</head>
+<body>
+#include("./layout/header.html")
+<div id="main" class="clear-fix">
+   #include("./layout/sidebar.html")
+   <div id="content" class="fr"></div>
+</div>
+<!--  模板引擎 https://aui.github.io/art-template/zh-cn/docs/syntax.html#%E5%BE%AA%E7%8E%AF -->
+<script type="text/html" id="product_render_data">
+   <section icon>
+      <img src="{{icon}}" class="main-icon" alt="">
+      <h2>{{title}}</h2>
+   </section>
+   <section introduction>
+      <div class="content-title">
+         <h3>应用简介</h3>
+      </div>
+      <p>{{introduction}}</p>
+   </section>
+   <section special>
+      <div class="content-title">
+         <h3>应用特点</h3>
+      </div>
+      {{each special}}
+      <p>{{$value}}</p>
+      {{/each}}
+   </section>
+   <section>
+      <div class="content-title">
+         <h3>应用展示</h3>
+      </div>
+   </section>
+</script>
+<!--#include("./layout/footer.html")-->
+</body>
+</html>

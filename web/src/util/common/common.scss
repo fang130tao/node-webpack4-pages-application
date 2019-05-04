@@ -1,0 +1,153 @@
+
+@import "./reset.css";
+@import "normalize.css";
+
+$main-color:#ea5413;
+
+.clear {
+   clear: both;
+}
+.hide{
+   display: none!important
+}
+.show{
+   display: block!important
+}
+.clear-fix::after{
+   content: '';
+   display: block;
+   clear: both;
+   visibility: hidden;
+}
+.fl{
+   float: left;
+}
+.fr{
+   float: right;
+}
+.click-hover{
+   background-color: #efefef;
+}
+
+.h-center{
+   position: absolute;
+   top: 50%;
+   transform: translate(0,-50%);
+}
+.w-center{
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%,0);
+}
+
+body{
+   background-color: #f4f4f4;
+
+}
+/*  main  */
+#main{
+   width: 1200px;
+   padding: 100px 0;
+   margin: 0 auto 0;
+}
+
+/*  sidebar  */
+#sidebar{
+   float: left;
+   position: relative;
+   width: 240px;
+   background-color: #fff;
+   .sidebar-content{
+      li{
+         a{
+            font-size: 18px;
+            color: #414141;
+            vertical-align: middle;
+            padding: 25px 40px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid #dddddd;
+            &:hover{
+               cursor: pointer;
+               //background: #eee;
+               color: $main-color;
+            }
+            &.sidebar-active{
+               //background: #eee;
+               color: $main-color;
+            }
+         }
+         img{
+            width: 18px;
+            height: 18px;
+            display: inline;
+         }
+         .iconfont{
+            width: 18px;
+            height: 18px;
+            display: inline;
+            vertical-align: middle;
+            transform: rotate(180deg);
+            float: right;
+         }
+      }
+   }
+}
+
+
+/*  header  */
+#header{
+   height: 70px;
+   line-height: 68px;
+   width: 100%;
+   background-color: #fafafa;
+   box-sizing: border-box;
+   border-bottom: 1px #e0e0e0 solid;
+   box-shadow: 3px 0 5px  #d9d9d9;
+   text-align: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 99;
+   div{
+      width: 1200px;
+      margin: 0 auto;
+      font-size: 30px;
+      color: #ea5413;
+      text-align: left;
+      img{
+         height: 30px;
+         margin-right: 14px;
+      }
+      h3{
+         display: inline-block;
+         vertical-align: middle;
+      }
+
+   }
+
+   #nav{
+      li{
+         float: left;
+         color: #333;
+         &.nav-active{
+            color: #FF8313;
+         }
+         &:hover{
+            cursor: pointer;
+            color:#FF8313;
+         }
+      }
+      a{
+         padding: 0 17px;
+         font-size: 18px;
+      }
+   }
+}
+
+/*  footer  */
+#footer{
+
+}
